@@ -1,3 +1,4 @@
+using AkameCaptcha.API.Common;
 using AkameCaptcha.API.Middleware;
 using AkameCaptcha.Application.Common;
 using AkameCaptcha.Application;
@@ -49,6 +50,7 @@ namespace AkameCaptcha.API
             const string XmlFilename = $"AkameCaptcha.API.xml";
 
             options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, XmlFilename));
+            options.OperationFilter<DefaultStatusCodesOperationFilter>();
         }
 
         private static void UseSwaggerMiddlewares(IApplicationBuilder app)

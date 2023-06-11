@@ -1,3 +1,4 @@
+using System.Net;
 using System.Net.Mime;
 using AkameCaptcha.Application.Dto;
 using FluentValidation;
@@ -31,21 +32,20 @@ namespace AkameCaptcha.API.Middleware
             }
             catch (Exception ex) when (FindInnerException(ex) is ValidationException validationException)
             {
-                const int UnprocessableContentStatusCode = 422;
                 var errorMessages = 
                     validationException.Errors.Select(error => error.ErrorMessage);
                 
-                await BuildErrorResponse(UnprocessableContentStatusCode, errorMessages, context);
+                await BuildErrorResponse(HttpStatusCode.UnprocessableEntity, errorMessages, context);
             }
             catch
             {
-                await BuildErrorResponse(StatusCodes.Status500InternalServerError, InternalErrorMessage, context);
+                await BuildErrorResponse(HttpStatusCode.InternalServerError, InternalErrorMessage, context);
             }
         }
 
-        private static Task BuildErrorResponse(int statusCode, IEnumerable<string> errorMessages, HttpContext context)
+        private static Task BuildErrorResponse(HttpStatusCode statusCode, IEnumerable<string> errorMessages, HttpContext context)
         {
-            context.Response.StatusCode = statusCode;
+            context.Response.StatusCode = (int) statusCode;
             context.Response.ContentType = MediaTypeNames.Application.Json;
 
             // TODO: Errors logging

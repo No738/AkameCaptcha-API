@@ -13,7 +13,6 @@ namespace AkameCaptcha.API.Controllers
     /// </summary>
     [ApiController]
     [Route("challenge")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
     public class ChallengeController
     {
         private readonly IMediator _mediator;
