@@ -1,8 +1,8 @@
 using AkameCaptcha.Application.Common.Validators;
-using AkameCaptcha.Application.Dto.WebhookSettings;
+using AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto;
 using FluentValidation;
 
-namespace AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto
+namespace AkameCaptcha.Application.Requests.Commands.CreateChallenge.Validators
 {
     /// <summary>
     /// Validator for <see cref="CreateChallengeDto"/>>

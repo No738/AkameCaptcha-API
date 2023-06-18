@@ -1,8 +1,7 @@
-using AkameCaptcha.Application.Common.Validators;
-using AkameCaptcha.Application.Dto.WebhookSettings;
+using AkameCaptcha.Application.Requests.Commands.SolveChallenge.Dto;
 using FluentValidation;
 
-namespace AkameCaptcha.Application.Requests.Commands.SolveChallenge.Dto
+namespace AkameCaptcha.Application.Requests.Commands.SolveChallenge.Validators
 {
     /// <summary>
     /// Validator for <see cref="SolveChallengeDto"/>>
@@ -12,7 +11,7 @@ namespace AkameCaptcha.Application.Requests.Commands.SolveChallenge.Dto
         /// <inheritdoc cref="SolveChallengeDtoValidator"/>
         public SolveChallengeDtoValidator()
         {
-            RuleFor(x => x.Token)
+            RuleFor(dto => dto.Token)
                 .NotEmpty();
         }
     }
