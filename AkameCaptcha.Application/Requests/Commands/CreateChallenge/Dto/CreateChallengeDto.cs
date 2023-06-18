@@ -10,7 +10,7 @@ namespace AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto
     /// Request for challenge creation 
     /// </summary>
     [JsonObject]
-    public class CreateChallengeDto : IRequest<Result<Guid>>
+    public sealed class CreateChallengeDto : IRequest<Result<Guid>>
     {
         /// <summary>
         /// Captcha provider

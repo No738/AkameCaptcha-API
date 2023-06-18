@@ -6,7 +6,7 @@ namespace AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto
     /// <summary>
     /// DTO for <see cref="GetChallengeQuery"/>>
     /// </summary>
-    public class GetChallengeDto : IRequest<Result<ChallengeResponseDto>>
+    public sealed class GetChallengeDto : IRequest<Result<GetChallengeResponseDto>>
     {
         /// <summary>
         /// Identifier of challenge

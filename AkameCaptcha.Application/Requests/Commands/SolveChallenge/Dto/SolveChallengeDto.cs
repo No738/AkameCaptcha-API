@@ -6,7 +6,7 @@ namespace AkameCaptcha.Application.Requests.Commands.SolveChallenge.Dto
     /// <summary>
     /// Challenge solution
     /// </summary>
-    public class SolveChallengeDto : IRequest<Result<SolveChallengeResponseDto>>
+    public sealed class SolveChallengeDto : IRequest<Result<SolveChallengeResponseDto>>
     {
         /// <summary>
         /// Response for challenge provider
