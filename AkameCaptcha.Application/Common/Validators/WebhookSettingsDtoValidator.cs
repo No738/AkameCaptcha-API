@@ -1,14 +1,14 @@
-using AkameCaptcha.Application.Common.Validators;
+﻿using AkameCaptcha.Application.Dto.WebhookSettings;
 using FluentValidation;
 
-namespace AkameCaptcha.Application.Dto.WebhookSettings
+namespace AkameCaptcha.Application.Common.Validators
 {
     /// <summary>
     /// Validator for webhook settings DTO
     /// </summary>
     public sealed class WebhookSettingsDtoValidator : AbstractValidator<WebhookSettingsDto>
     {
-        private static readonly UrlValidator UrlValidator = new ();
+        private static readonly UrlValidator<WebhookSettingsDto> UrlValidator = new ();
 
         /// <inheritdoc cref="WebhookSettingsDtoValidator"/>
         public WebhookSettingsDtoValidator()

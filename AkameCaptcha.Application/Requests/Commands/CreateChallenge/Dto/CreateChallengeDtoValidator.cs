@@ -9,8 +9,8 @@ namespace AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto
     /// </summary>
     public class CreateChallengeDtoValidator : AbstractValidator<CreateChallengeDto>
     {
+        private static readonly UrlValidator<CreateChallengeDto> UrlValidator = new ();
         private static readonly WebhookSettingsDtoValidator WebhookSettingsDtoValidator = new ();
-        private static readonly UrlValidator UrlValidator = new ();
 
         /// <inheritdoc cref="CreateChallengeDtoValidator"/>
         public CreateChallengeDtoValidator()
