@@ -2,7 +2,6 @@ using AkameCaptcha.API.Common;
 using AkameCaptcha.API.Middleware;
 using AkameCaptcha.Application.Common;
 using AkameCaptcha.Application;
-using AkameCaptcha.Application.Dto;
 using FluentResults.Extensions.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -56,9 +55,12 @@ namespace AkameCaptcha.API
         
         private static void SetupSwaggerGen(SwaggerGenOptions options)
         {
-            const string XmlFilename = $"AkameCaptcha.API.xml";
-
-            options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, XmlFilename));
+            var xmlFiles = Directory.GetFiles(AppContext.BaseDirectory, "*.xml");
+            foreach (var xmlFile in xmlFiles)
+            {
+                options.IncludeXmlComments(xmlFile);
+            }
+            
             options.OperationFilter<DefaultStatusCodesOperationFilter>();
         }
 

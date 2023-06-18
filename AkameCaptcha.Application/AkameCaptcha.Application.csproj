@@ -6,6 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\AkameCaptcha.Application.xml</DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
       <PackageReference Include="FluentResults.Extensions.AspNetCore" Version="0.1.0" />
       <PackageReference Include="FluentValidation" Version="11.5.2" />
