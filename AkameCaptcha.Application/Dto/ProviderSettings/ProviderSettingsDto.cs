@@ -1,7 +1,7 @@
 ﻿using AkameCaptcha.Domain;
 using Newtonsoft.Json;
 
-namespace AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto
+namespace AkameCaptcha.Application.Dto.ProviderSettings
 {
     /// <summary>
     /// DTO with settings of challenge provider
