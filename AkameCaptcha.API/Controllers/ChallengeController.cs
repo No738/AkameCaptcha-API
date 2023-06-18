@@ -1,6 +1,5 @@
 ﻿using AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto;
 using AkameCaptcha.Application.Requests.Commands.SolveChallenge.Dto;
-using AkameCaptcha.Application.Requests.Queries.GetChallenge;
 using AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto;
 using FluentResults.Extensions.AspNetCore;
 using MediatR;
