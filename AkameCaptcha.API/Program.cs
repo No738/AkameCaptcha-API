@@ -2,6 +2,7 @@ using AkameCaptcha.API.Common;
 using AkameCaptcha.API.Middleware;
 using AkameCaptcha.Application.Common;
 using AkameCaptcha.Application;
+using AkameCaptcha.Application.Dto;
 using FluentResults.Extensions.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -17,6 +18,11 @@ namespace AkameCaptcha.API
             builder.Services.Configure<MvcOptions>(options =>
             {
                 options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
+            });
+            
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
             });
             
             ConfigureAndRegisterServices(builder.Services);
@@ -42,7 +48,10 @@ namespace AkameCaptcha.API
         private static void ConfigureAndRegisterServices(IServiceCollection services)
         {
             services.AddMediatR(services.RegisterApplicationDependencies)
-                    .AddControllers();
+                    .AddControllers(options =>
+                    {
+                        options.Filters.Add<ValidationActionFilter>();
+                    });
         }
         
         private static void SetupSwaggerGen(SwaggerGenOptions options)
