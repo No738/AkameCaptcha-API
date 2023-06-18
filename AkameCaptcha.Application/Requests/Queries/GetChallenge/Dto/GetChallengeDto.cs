@@ -1,8 +1,7 @@
-﻿using AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto;
-using FluentResults;
+﻿using FluentResults;
 using MediatR;
 
-namespace AkameCaptcha.Application.Requests.Queries.GetChallenge
+namespace AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto
 {
     /// <summary>
     /// DTO for <see cref="GetChallengeQuery"/>>
