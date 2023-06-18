@@ -13,17 +13,17 @@ namespace AkameCaptcha.API.Common
         /// <summary>
         /// If model state is not valid, converting response into <see cref="ErrorsDto"/>
         /// </summary>
-        public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+        public Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             if (!context.ModelState.IsValid)
             {
                 var errorsDto = GetErrorsDto(context.ModelState);
                 context.Result = new JsonResult(errorsDto);
             
-                return;
+                return Task.CompletedTask;
             }
             
-            await next();
+            return next();
         }
 
         private static ErrorsDto GetErrorsDto(ModelStateDictionary modelState)
