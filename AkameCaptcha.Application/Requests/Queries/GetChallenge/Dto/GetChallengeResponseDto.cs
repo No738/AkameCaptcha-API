@@ -1,8 +1,9 @@
-﻿using AkameCaptcha.Domain;
+﻿using AkameCaptcha.Application.Dto.ProviderSettings;
+using AkameCaptcha.Domain;
 
 namespace AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto
 {
-    public class ChallengeResponseDto
+    public sealed class GetChallengeResponseDto
     {
         /// <summary>
         /// Challenge state status

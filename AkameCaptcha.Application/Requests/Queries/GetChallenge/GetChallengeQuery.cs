@@ -4,9 +4,9 @@ using MediatR;
 
 namespace AkameCaptcha.Application.Requests.Queries.GetChallenge
 {
-    public class GetChallengeQuery : IRequestHandler<GetChallengeDto, Result<ChallengeResponseDto>>
+    public class GetChallengeQuery : IRequestHandler<GetChallengeDto, Result<GetChallengeResponseDto>>
     {
-        public Task<Result<ChallengeResponseDto>> Handle(GetChallengeDto request, CancellationToken cancellationToken)
+        public Task<Result<GetChallengeResponseDto>> Handle(GetChallengeDto request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

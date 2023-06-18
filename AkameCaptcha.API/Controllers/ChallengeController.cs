@@ -28,7 +28,7 @@ namespace AkameCaptcha.API.Controllers
         /// </summary>
         /// <param name="getChallengeDto">Request DTO</param>
         /// <param name="cancellationToken">Cancellation token</param>
-        /// <returns>Returns result with <see cref="ChallengeResponseDto"/></returns>
+        /// <returns>Returns result with <see cref="GetChallengeResponseDto"/></returns>
         [HttpGet]
         public async Task<ActionResult> GetAsync([FromQuery] GetChallengeDto getChallengeDto,
                                                  CancellationToken cancellationToken)
