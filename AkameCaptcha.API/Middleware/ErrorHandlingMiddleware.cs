@@ -1,7 +1,6 @@
 using System.Net;
 using System.Net.Mime;
 using AkameCaptcha.Application.Dto;
-using FluentValidation;
 
 namespace AkameCaptcha.API.Middleware
 {
@@ -30,13 +29,6 @@ namespace AkameCaptcha.API.Middleware
             {
                 await _next(context);
             }
-            catch (Exception ex) when (FindInnerException(ex) is ValidationException validationException)
-            {
-                var errorMessages = 
-                    validationException.Errors.Select(error => error.ErrorMessage);
-                
-                await BuildErrorResponse(HttpStatusCode.UnprocessableEntity, errorMessages, context);
-            }
             catch
             {
                 await BuildErrorResponse(HttpStatusCode.InternalServerError, InternalErrorMessage, context);
@@ -48,18 +40,10 @@ namespace AkameCaptcha.API.Middleware
             context.Response.StatusCode = (int) statusCode;
             context.Response.ContentType = MediaTypeNames.Application.Json;
 
-            // TODO: Errors logging
+            // TODO: Exceptions logging
             var errorsDto = new ErrorsDto(errorMessages);
 
             return context.Response.WriteAsJsonAsync(errorsDto);
-        }
-
-        private static Exception FindInnerException(Exception ex)
-        {
-            while (ex.InnerException != null)
-                ex = ex.InnerException;
-
-            return ex;
         }
     }
 }
