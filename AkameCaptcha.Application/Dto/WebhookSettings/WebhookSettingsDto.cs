@@ -9,7 +9,7 @@ namespace AkameCaptcha.Application.Dto.WebhookSettings
     public class WebhookSettingsDto
     {
         /// <summary>
-        /// Address for webhook
+        /// URL for webhook
         /// </summary>
         [JsonProperty("webhookURL")]
         public required string WebhookUrl { get; set; }
