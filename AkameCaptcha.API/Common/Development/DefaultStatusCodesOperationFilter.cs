@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace AkameCaptcha.API.Common
+namespace AkameCaptcha.API.Common.Development
 {
     /// <summary>
     /// Operation filter for adding default status codes to Swagger
