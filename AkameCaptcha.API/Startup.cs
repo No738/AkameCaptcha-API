@@ -62,6 +62,12 @@ namespace AkameCaptcha.API
         public void Configure(IApplicationBuilder app)
         {
             app.UseMiddleware<ErrorHandlingMiddleware>();
+
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
