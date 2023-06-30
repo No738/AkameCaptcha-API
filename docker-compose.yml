@@ -1,0 +1,9 @@
+services:
+  captcha-api:
+    image: captcha-api
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: AkameCaptcha.API/Dockerfile
+    ports:
+      - "5000:80"

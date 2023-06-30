@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkameCaptcha.API", "AkameCaptcha.API\AkameCaptcha.API.csproj", "{998446A2-18BA-4EE1-BB45-FAF626D2642C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkameCaptcha.Domain", "AkameCaptcha.Domain\AkameCaptcha.Domain.csproj", "{F9E59F6A-DC30-4835-A4A3-09F606F43E53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkameCaptcha.Application", "AkameCaptcha.Application\AkameCaptcha.Application.csproj", "{89908A89-5335-4042-A6B5-1C4CAEB05D01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkameCaptcha.DAL", "AkameCaptcha.DAL\AkameCaptcha.DAL.csproj", "{3FB9D85B-2614-4956-B54E-F64153323878}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{998446A2-18BA-4EE1-BB45-FAF626D2642C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998446A2-18BA-4EE1-BB45-FAF626D2642C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998446A2-18BA-4EE1-BB45-FAF626D2642C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998446A2-18BA-4EE1-BB45-FAF626D2642C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E59F6A-DC30-4835-A4A3-09F606F43E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E59F6A-DC30-4835-A4A3-09F606F43E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E59F6A-DC30-4835-A4A3-09F606F43E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E59F6A-DC30-4835-A4A3-09F606F43E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89908A89-5335-4042-A6B5-1C4CAEB05D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89908A89-5335-4042-A6B5-1C4CAEB05D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89908A89-5335-4042-A6B5-1C4CAEB05D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89908A89-5335-4042-A6B5-1C4CAEB05D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB9D85B-2614-4956-B54E-F64153323878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB9D85B-2614-4956-B54E-F64153323878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB9D85B-2614-4956-B54E-F64153323878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB9D85B-2614-4956-B54E-F64153323878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
