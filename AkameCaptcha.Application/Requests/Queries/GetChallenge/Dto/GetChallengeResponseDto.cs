@@ -3,6 +3,9 @@ using AkameCaptcha.Domain;
 
 namespace AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto
 {
+    /// <summary>
+    /// Get challenge response DTO
+    /// </summary>
     public sealed class GetChallengeResponseDto
     {
         /// <summary>
