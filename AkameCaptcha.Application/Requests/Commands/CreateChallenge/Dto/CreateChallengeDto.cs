@@ -16,7 +16,7 @@ namespace AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto
         /// Captcha provider
         /// </summary>
         [JsonProperty("provider")]
-        public CaptchaProvider? Provider { get; set; }
+        public ChallengeProvider? Provider { get; set; }
         
         /// <summary>
         /// Challenge life time

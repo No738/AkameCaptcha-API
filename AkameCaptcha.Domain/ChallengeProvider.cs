@@ -3,7 +3,7 @@ namespace AkameCaptcha.Domain
     /// <summary>
     /// Type of captcha provider
     /// </summary>
-    public enum CaptchaProvider
+    public enum ChallengeProvider
     {
         /// <summary>
         /// hCaptcha provider
@@ -16,7 +16,7 @@ namespace AkameCaptcha.Domain
         reCAPTCHA = 2,
         
         /// <summary>
-        /// Turnstile provider
+        /// Cloudflare Turnstile provider
         /// </summary>
         Turnstile = 3
     }

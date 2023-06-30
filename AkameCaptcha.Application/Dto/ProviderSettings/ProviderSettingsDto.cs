@@ -11,7 +11,7 @@ namespace AkameCaptcha.Application.Dto.ProviderSettings
         /// <inheritdoc cref="ProviderSettingsDto"/>
         /// <param name="key">Challenge provider API key</param>
         /// <param name="provider">Challenge provider type</param>
-        public ProviderSettingsDto(string key, CaptchaProvider provider)
+        public ProviderSettingsDto(string key, ChallengeProvider provider)
         {
             Key = key;
             Provider = provider;
@@ -27,6 +27,6 @@ namespace AkameCaptcha.Application.Dto.ProviderSettings
         /// Captcha provider
         /// </summary>
         [JsonProperty("type")]
-        public CaptchaProvider Provider { get; set; }
+        public ChallengeProvider Provider { get; set; }
     }
 }
