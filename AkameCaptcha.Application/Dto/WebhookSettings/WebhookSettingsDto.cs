@@ -12,12 +12,12 @@ namespace AkameCaptcha.Application.Dto.WebhookSettings
         /// URL for webhook
         /// </summary>
         [JsonProperty("webhookURL")]
-        public required string WebhookUrl { get; set; }
+        public required string WebhookUrl { get; init; }
         
         /// <summary>
         /// Payload for the webhook
         /// </summary>
         [JsonProperty("payload")]
-        public string? WebhookPayload { get; set; }
+        public string? WebhookPayload { get; init; }
     }
 }

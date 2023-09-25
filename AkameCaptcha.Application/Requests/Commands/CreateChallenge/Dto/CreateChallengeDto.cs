@@ -16,24 +16,24 @@ namespace AkameCaptcha.Application.Requests.Commands.CreateChallenge.Dto
         /// Captcha provider
         /// </summary>
         [JsonProperty("provider")]
-        public ChallengeProvider? Provider { get; set; }
+        public ChallengeProvider? Provider { get; init; }
         
         /// <summary>
         /// Challenge life time
         /// </summary>
         [JsonProperty("ttl")]
-        public int? TimeToLive { get; set; }
+        public int? TimeToLive { get; init; }
         
         /// <summary>
         /// Redirect URL on successful solution of the challenge (given to the front-end)
         /// </summary>
         [JsonProperty("redirectURL")]
-        public required string RedirectUrl { get; set; }
+        public required string RedirectUrl { get; init; }
         
         /// <summary>
         /// Settings for webhook on successful solution of a challenge
         /// </summary>
         [JsonProperty("webhookSettings")]
-        public required WebhookSettingsDto WebhookSettings { get; set; }
+        public required WebhookSettingsDto WebhookSettings { get; init; }
     }
 }

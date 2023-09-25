@@ -11,17 +11,17 @@ namespace AkameCaptcha.Application.Requests.Queries.GetChallenge.Dto
         /// <summary>
         /// Challenge state status
         /// </summary>
-        public required ChallengeStatus Status { get; set; }
+        public required ChallengeStatus Status { get; init; }
         
         /// <summary>
         /// Challenge provider settings DTO
         /// </summary>
-        public required ProviderSettingsDto ProviderSettings { get; set; }
+        public required ProviderSettingsDto ProviderSettings { get; init; }
         
         /// <summary>
         /// Date and time of challenge creation
         /// <remarks>ISO 8601 format</remarks>
         /// </summary>
-        public required DateTime CreatedAt { get; set; }
+        public required DateTime CreatedAt { get; init; }
     }
 }
